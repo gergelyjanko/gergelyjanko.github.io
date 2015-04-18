@@ -1,9 +1,13 @@
-body {
-  background-color:white;
-  color: #362f2d;
+html {
+  font-size: 62,5%;
+
 }
 
-
+body {
+  background:white;
+  color: #362f2d;
+  font: 1em/1 'open sans' arial;
+}
 
 .clearfix:before,
 .clearfix:after {
@@ -29,14 +33,55 @@ body {
 
 
 .header {
-  background: #f26d7d;
-  height: 50px;
+
 }
 
+.logo {
+  margin: 0;
+  background: #f26d7d;
+}
+
+.logo a {
+  background: url(images/logo.png);
+  display: block;
+  height: 50px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 250px;
+}
+
+.phone {
+
+  margin: 15px 20px;
+  border-radius: 10px;
+  line-height: 43px;
+  border: 1px solid #f26d7d;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.phone a {
+  color: #007236;
+  text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 255, 255, .3);
+}
+
+.facebook {
+  display: none;
+}
 .columns {
 
 }
-
 
 .content {
   min-height: 200px;
@@ -57,10 +102,59 @@ body {
 
 
 
+
+
+
 @media screen and (min-width: 978px) {
 
   body {
     background: #fcfbf8;
+  }
+
+  .logo {
+    float: left;
+    background: none;
+    margin: 20px 0 30px;
+  }
+
+  .logo a {
+    width: 480px;
+    height: 80px;
+    background-image: url(images/logodt.png);
+  }
+
+  .phone {
+    float:right;
+    margin: 30px 0 0;
+    width: 175px;
+    line-height: 1.5;
+    height: auto;
+    padding: 5px 0;
+
+  }
+
+  .phone a {
+    white-space: nowrap;
+    font-size: 1.5em;
+    font-style: italic;
+  }
+
+  .menu {
+    position: static;
+    width: auto;
+    height: 40px;
+    min-width: 200px;
+    clear: both;
+    float: left;
+  }
+
+  .facebook {
+    float: right;
+    display: block;
+    height: 40px;
+    min-width: 100px;
+    background: blue;
+    margin: 0;
   }
 
   .wrapper {
