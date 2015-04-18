@@ -1,0 +1,48 @@
+body {
+  background-color:white;
+  color: #362f2d;
+}
+.wrapper {
+
+}
+
+
+.header {
+  background: #f26d7d;
+  height: 50px;
+}
+
+.columns {
+
+}
+
+.content {
+  min-height: 200px;
+  background: rgba(255, 0, 0, 0.1)
+
+}
+
+.sidebar {
+  min-height: 200px;
+  background: rgba(205, 0, 0, 0.2)
+
+}
+
+.footer {
+  background: #f8b6be;
+  height: 85px;
+}
+
+
+@media screen and (min-width: 978px) {
+  .wrapper {
+    width: 978px;
+    margin: 0 auto;
+  }
+
+  .header {
+    height: 195px;
+    background: none;
+
+  }
+}
