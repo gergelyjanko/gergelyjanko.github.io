@@ -2,6 +2,27 @@ body {
   background-color:white;
   color: #362f2d;
 }
+
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
 .wrapper {
 
 }
@@ -16,16 +37,15 @@ body {
 
 }
 
+
 .content {
   min-height: 200px;
   background: rgba(255, 0, 0, 0.1)
-
 }
 
 .sidebar {
   min-height: 200px;
   background: rgba(205, 0, 0, 0.2)
-
 }
 
 .footer {
@@ -34,7 +54,15 @@ body {
 }
 
 
+
+
+
 @media screen and (min-width: 978px) {
+
+  body {
+    background: #fcfbf8;
+  }
+
   .wrapper {
     width: 978px;
     margin: 0 auto;
@@ -43,6 +71,27 @@ body {
   .header {
     height: 195px;
     background: none;
-
   }
+
+  .columns {
+    background: white;
+    padding: 30px;
+  }
+
+  .content {
+    float:left;
+    width: 602px;
+  }
+
+  .sidebar {
+    float: right;
+    width: 286px;
+  }
+
+  .footer {
+    background: none;
+    height: 50px;
+    margin: 20px;
+  }
+
 }
