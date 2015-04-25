@@ -9,6 +9,9 @@ body {
   font: 1em/1 'open sans' arial;
 }
 
+body p {
+  line-height: 1.3;
+}
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
@@ -31,9 +34,12 @@ body {
 
 }
 
-
 .header {
 
+}
+
+#nav:target .header {
+  background: #f26d7d;
 }
 
 .logo {
@@ -50,16 +56,20 @@ body {
   overflow: hidden;
   margin: 0 auto;
   width: 250px;
+  position: relative;
+  z-index: 100;
 }
 
 .phone {
-
   margin: 15px 20px;
   border-radius: 10px;
   line-height: 43px;
   border: 1px solid #f26d7d;
   font-size: 0.9em;
   text-align: center;
+  background: white;
+  position: relative;
+  z-index: 100;
 }
 
 .phone a {
@@ -69,34 +79,201 @@ body {
 
 .menu {
   position: absolute;
-  right: 0;
+  width: 100%;
   top: 0;
+}
+
+.menu .toggle {
   width: 50px;
   height: 50px;
-  background: rgba(0, 255, 255, .3);
+  background: purple;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#nav:target .menu ul {
+  display: block;
+}
+
+.menu .close {
+  display: none;
+}
+
+#nav:target .menu .close {
+  display: block;
+}
+
+.menu li {
+  background: #f26d7d;
+  list-style: none;
+}
+
+.menu ul {
+  display: none;
+  padding: 0;
+  margin: 125px 0 0 0;
+}
+
+.menu a {
+  display: block;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .facebook {
   display: none;
 }
-.columns {
 
+.columns {
 }
 
 .content {
   min-height: 200px;
-  background: rgba(255, 0, 0, 0.1)
 }
 
+.content p {
+  box-sizing: border-box;
+  max-width: 300px;
+  float: left;
+  padding-left: 20px;
+}
+
+.tovabb a {
+  box-sizing: border-box;
+  width: 250px;
+  height: 40px;
+  border: 1px solid black;
+  line-height: 20px;
+  padding-left: 20px 0 20px 0;
+}
+
+.galeria {
+  padding: 20px;
+}
+
+.kep {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 140px;
+  height: 100px;
+  background: url(images/toll.png);
+  margin: 5px;
+  border-bottom: 5px solid #f8b6be;
+}
+
+.fejlec {
+  box-sizing: border-box;
+  display: block;
+  height: 50px;
+  background-color: #f8b6be;
+}
+
+.fejlec a {
+  float: right;
+  padding: 15px;
+}
+
+.fejlec h1 {
+  float: left;
+  font-size: 24px;
+  line-height: 44px;
+  padding-left: 15px;
+}
+
+.hir {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 400px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.hir h1 {
+  font-weight: bold;
+  line-height: 1.3;
+}
 .sidebar {
   min-height: 200px;
-  background: rgba(205, 0, 0, 0.2)
 }
+
+.napi, .hirlevel, .kedvencek {
+  background-color: #fef0f2;
+  border-radius: 0px;
+  margin-top: 20px;
+}
+
+.kedvencek li {
+  line-height: 2;
+  border-bottom: 1px solid pink;
+}
+
+.sidebar h1 {
+  background-color: #f8b6be;
+  line-height: 30px;
+  padding: 10px;
+  color: #603913;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.napi p {
+  color: #f8b6be;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.sidebar ul, .sidebar p, .sidebar h3 {
+  padding: 10px;
+}
+
+.hirlevel p {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+input[type=email] {
+  box-sizing: border-box;
+  width: 242px;
+  height: 44px;
+  border-radius: 3px;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f8b6be;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+input[type=submit] {
+  box-sizing: border-box;
+  width: 150px;
+  height: 40px;
+  background: #f8b6be;
+  border: none;
+  font-size: 16px;
+  margin: 20px 0 20px 0;
+  }
+
 
 .footer {
   background: #f8b6be;
   height: 85px;
+  margin-top: 20px;
 }
+
+.nav2 a {
+  display: none;
+}
+
 
 
 
@@ -148,6 +325,19 @@ body {
     float: left;
   }
 
+  .menu ul {
+    display: block;
+    margin: 0;
+  }
+
+  .menu .toggle {
+    display: none;
+  }
+
+  .menu li {
+    float: left;
+  }
+
   .facebook {
     float: right;
     display: block;
@@ -167,6 +357,14 @@ body {
     background: none;
   }
 
+  #nav:target .header {
+    background: none;
+  }
+
+  #nav:target .menu .close {
+    background: none;
+  }
+
   .columns {
     background: white;
     padding: 30px;
@@ -177,10 +375,42 @@ body {
     width: 602px;
   }
 
+  .hir {
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 185px;
+    padding-right: 20px;
+    padding-left: 0px;
+  }
+
+
+
   .sidebar {
     float: right;
     width: 286px;
   }
+
+  .napi, .hirlevel, .kedvencek {
+    background-color: #fef0f2;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .sidebar h1 {
+    background-color: #f8b6be;
+    line-height: 30px;
+    padding: 10px;
+    color: #603913;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+ form {
+   padding: 10px;
+ }
 
   .footer {
     background: none;
@@ -188,4 +418,10 @@ body {
     margin: 20px;
   }
 
+  .footer a {
+    color: #362f2d;
+  }
+ .nav2 a {
+   display: inline;
+ }
 }
